@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Chat.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="RoomUI" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 2
+
+[node name="ChatDisplay" type="TextEdit" parent="RoomUI"]
+margin_right = 1024.0
+margin_bottom = 572.0
+size_flags_vertical = 3
+readonly = true
+
+[node name="ChatInput" type="LineEdit" parent="RoomUI"]
+margin_top = 576.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="SetUp" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 24.0
+alignment = 2
+
+[node name="LeaveButton" type="Button" parent="SetUp"]
+visible = false
+margin_left = 487.0
+margin_top = 226.0
+margin_right = 536.0
+margin_bottom = 246.0
+text = "Leave"
+
+[node name="JoinButton" type="Button" parent="SetUp"]
+margin_left = 758.0
+margin_right = 793.0
+margin_bottom = 24.0
+text = "Join"
+
+[node name="HostButton" type="Button" parent="SetUp"]
+margin_left = 797.0
+margin_right = 839.0
+margin_bottom = 24.0
+text = "Host"
+
+[node name="Label2" type="Label" parent="SetUp"]
+margin_left = 843.0
+margin_top = 5.0
+margin_right = 920.0
+margin_bottom = 19.0
+text = "IP Address: "
+
+[node name="IpEnter" type="LineEdit" parent="SetUp"]
+margin_left = 924.0
+margin_right = 1024.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 0 )
+text = "127.0.0.1"
